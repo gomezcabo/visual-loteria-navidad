@@ -1,20 +1,23 @@
 <template>
-  <div class="w-full flex flex-wrap border-1 border-black">
-    <div
-      v-for="number in numbers"
-      class="w-1 h-1"
-      :class="{
-        'bg-green-900': number && number !== 200,
-        'rounded-full': number,
-        'bg-pink-100': number === 200,
-        'z-0': number === 200,
-        'z-10': number !== 200,
-      }"
-      :style="{
-        transform: `scale(${1 + (20 * number) / 4_000_000})`,
-        opacity: number > 2000 ? 0.5 : 1,
-      }"
-    ></div>
+  <div class="w-full p-4">
+    <h1 class="font-bold">Distribución de premios - Lotería de Navidad</h1>
+    <div class="flex flex-wrap border rounded border-gray-500 shadow-lg">
+      <div
+        v-for="number in numbers"
+        class="w-1 h-1"
+        :class="{
+          'bg-green-900': number && number !== 200,
+          'rounded-full': number,
+          'bg-pink-100': number === 200,
+          'z-0': number === 200,
+          'z-10': number !== 200,
+        }"
+        :style="{
+          transform: `scale(${1 + (20 * number) / 4_000_000})`,
+          opacity: number > 2000 ? 0.5 : 1,
+        }"
+      ></div>
+    </div>
   </div>
 </template>
 
