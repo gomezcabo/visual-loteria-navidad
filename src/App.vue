@@ -1,6 +1,8 @@
 <template>
   <div class="w-full p-4">
-    <h1 class="font-bold">Distribución de premios - Lotería de Navidad</h1>
+    <h1 class="font-bold">
+      Lotería de Navidad - Distribución visual de premios
+    </h1>
     <div class="flex flex-wrap border rounded border-gray-500 shadow-lg">
       <div
         v-for="number in numbers"
